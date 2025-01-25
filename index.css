@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: serif;
+}
+
+body {
+  background: url('../styles/images/tablepat.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    text-align: center;
+    padding: 7rem 2rem;
+    justify-content: center;
+}
+
+h1 {
+  color: rgba(255, 208, 0, 0.945);
+  font-size: 3rem;
+  text-transform: uppercase;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke: 1px;
+}
+
+.bank {
+  color: rgb(158, 224, 59);
+  font-size: 1.7rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 40%;
+  margin: 0 auto;
+  padding: 1rem 3rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 208, 0, 0.945);
+  min-width: 500px;
+}
+
+.start-btn {
+  padding: 1.5rem 0;
+  width: 40%;
+  font-size: 2rem;
+  color: rgba(95, 78, 0, 0.945);
+  border: 3px solid rgba(255, 208, 0, 0.945);
+  border-radius: 1rem;
+  cursor: pointer;
+  margin: 1rem 0;
+  transition: box-shadow 0.2s ease-in-out;
+  min-width: 500px;
+}
+
+.play-btn-container {
+  width: 40%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  display: flex;
+  min-width: 500px;
+}
+
+.play-btn {
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  width: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: color 0.2s ease-in-out;
+  border: 1px solid rgba(255, 208, 0, 0.945);
+  color: white;
+  margin: 0 0.3rem;
+  cursor: pointer;
+}
+
+.play-btn:hover {
+  color: rgba(255, 208, 0, 0.945);
+}
+
+button:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping of cards if they don't fit in one row */
+  justify-content: center;
+  gap: 1rem;
+  margin: 3rem 0;
+}
+
+.dealer-card-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping of cards if they don't fit in one row */
+  justify-content: center;
+  gap: 2rem;
+  margin: 1rem 0;
+}
+
+
+
+.card-slot {
+  background-color: transparent;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  border: 1px dashed rgba(255, 208, 0, 0.945);
+  border-radius: 0.4rem;
+  font-size: 2rem; /* Adjust font size to make cards smaller */
+  width: 150px; /* Set a fixed width */
+  height: 225px; /* Maintain aspect ratio */
+  background-size: cover; /* Ensure the card image fills the slot */
+  background-position: center; /* Center the card image */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  overflow: hidden; /* Prevent overflow */
+  -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+@keyframes jitter {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(-2px, 2px); }
+  50% { transform: translate(2px, -2px); }
+  75% { transform: translate(-2px, -2px); }
+  100% { transform: translate(0, 0); }
+}
+
+.jitter {
+  animation: jitter 0.5s infinite;
+}
+
+
+
+.dealer-card-slot {
+  background-color: transparent;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  /* border: 1px dashed rgba(255, 208, 0, 0.945); */
+  border-radius: 0.4rem;
+  font-size: 2rem; /* Adjust font size to make cards smaller */
+  width: 50px; /* Set a fixed width */
+  height: 75px; /* Maintain aspect ratio */
+  background-size: cover; /* Ensure the card image fills the slot */
+  background-position: center; /* Center the card image */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  overflow: hidden; /* Prevent overflow */
+  -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+.result-container {
+  display: flex;
+  justify-content: center;
+}
+
+.neutral h3 {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid gold;
+}
+
+.loss h3 {
+  background-color: rgba(255, 3, 3, 0.5);
+  color: white;
+  border: 1px solid gold;
+}
+
+.win h3 {
+  background-color: rgba(1, 170, 1, 0.5);
+  color: white;
+  border: 1px solid gold;
+}
+
+/* .result-container img {
+  width: 100px;
+  background-color: red;
+} */
+
+.result {
+  color: rgba(255, 215, 177, 0.945);
+  font-weight: lighter;
+  width: 40%;
+  min-width: 500px;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+
