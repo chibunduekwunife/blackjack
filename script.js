@@ -61,7 +61,7 @@ function randomCardURL(isPlayer){
   const randomIndexCard = Math.floor(Math.random() * cardsURL.length)
   const randomIndexFolder = Math.floor(Math.random() * folderURL.length)
 
-  let cardDirectory = './styles/images/Flat-Playing-Cards-Set/Flat Playing Cards Set'
+  let cardDirectory = './styles/images/Flat-Playing-Cards-Set/Flat-Playing-Cards-Set'
   cardDirectory += folderURL[randomIndexFolder] + cardsURL[randomIndexCard]
 
   if (isPlayer) {
@@ -151,7 +151,7 @@ function renderCards(slot, isPlayer, isFirstCard){
 
   if (!isPlayer && !isFirstCard) {
     randomCardURL(false)
-    slotInnerHTML = `<img src="./styles/images/Flat-Playing-Cards-Set/Flat Playing Cards Set/Back Covers/Pomegranate.png" alt="Card" width="100%" height="100%">`
+    slotInnerHTML = `<img src="./styles/images/Flat-Playing-Cards-Set/Flat-Playing-Cards-Set/Back-Covers/Pomegranate.png" alt="Card" width="100%" height="100%">`
   } else {
     slotInnerHTML = `<img src="${randomCardURL(isPlayer)}" alt="Card" width="100%" height="100%">`
   }
