@@ -177,7 +177,7 @@ function clearCards(){
 
   cardSumPlayer = 0
   cardSumDealer = 0
-  resultEl.innerHTML = `<em>Click the "Start Game" button below to Play!</em>🥂`
+  resultEl.innerHTML = `<em>Click the "Start Game" button below to Play!</em>`
   changeClassList();
 }
 
@@ -205,7 +205,7 @@ function checkResults(){
     bank += 25
     bankEl.innerHTML = `Bank: $${bank}`
     
-    resultEl.innerHTML = `<em>YOU GOT JACKPOT! (${cardSumPlayer})</em> 👏🏽`
+    resultEl.innerHTML = `<em>YOU GOT JACKPOT! (${cardSumPlayer})</em>`
     addJitter(resultEl, jitterDuration)
     changeClassList('yes')
     startBtn.innerHTML = 'Play Again'
@@ -217,7 +217,7 @@ function checkResults(){
     bank -= 10
     bankEl.innerHTML = `Bank: $${bank}`
 
-    resultEl.innerHTML = `<em>You lost and exceeded a total of 21 (${cardSumPlayer}))</em> 😬`
+    resultEl.innerHTML = `<em>You lost and exceeded a total of 21 (${cardSumPlayer}))</em>`
     addJitter(resultEl, jitterDuration)
     changeClassList('no')
     startBtn.innerHTML = 'Play Again'
@@ -276,7 +276,7 @@ standBtn.addEventListener("click", function(){
       bank += 30
       bankEl.innerHTML = `Bank: $${bank}`
       
-      resultEl.innerHTML = `<em>YOU WIN! (Your Sum: ${cardSumPlayer} Dealer's Sum: ${cardSumDealer})</em> 👏🏽`
+      resultEl.innerHTML = `<em>YOU WIN! (Your Sum: ${cardSumPlayer} Dealer's Sum: ${cardSumDealer})</em>`
       addJitter(resultEl, jitterDuration)
       changeClassList('yes')
       startBtn.innerHTML = 'Play Again'
@@ -288,7 +288,7 @@ standBtn.addEventListener("click", function(){
         bank -= 20
         bankEl.innerHTML = `Bank: $${bank}`
   
-        resultEl.innerHTML = `<em>YOU LOSE! (Your Sum: ${cardSumPlayer} Dealer's Sum: ${cardSumDealer})</em> 😬`
+        resultEl.innerHTML = `<em>YOU LOSE! (Your Sum: ${cardSumPlayer} Dealer's Sum: ${cardSumDealer})</em>`
         addJitter(resultEl, jitterDuration)
         changeClassList('no')
         startBtn.innerHTML = 'Play Again'
